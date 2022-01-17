@@ -137,6 +137,8 @@ if __name__ == "__main__":
     for i in range(200):
         latest_measurement = mill._get_latest_measurement()
         print(latest_measurement)
-        save_mill_data_to_file("mill1.pkl", latest_measurement)
-        time.sleep(600)
+        now = datetime.now()
+        # save_mill_data_to_file("data/daily/mill.pkl", latest_measurement)
+        save_mill_data_to_all_periodic_files(latest_measurement, mill._session_id, now)
+        time.sleep(30)
         
