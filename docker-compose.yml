@@ -1,0 +1,5 @@
+services:
+  mill-applet:
+    build: ./
+    volumes:
+      - ./data:/home/pi/MILL_applet/data
